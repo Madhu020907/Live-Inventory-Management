@@ -1,13 +1,15 @@
-# 🛒 Production-Grade E-Commerce Backend REST API
+# 🛒 E-Commerce Inventory Dashboard
 
-A scalable, high-performance backend system built using Python and FastAPI, featuring a relational SQLite database integration layer managed through SQLAlchemy ORM.
+A simple web application to manage product inventory. You can add items with prices in Rupees (₹), view your active stock, and delete items from a list.
 
-## 🚀 Key Architectural Features
-* **Automated Data Validation:** Utilizes Pydantic schemas to strictly validate model pricing structures and stock metrics at the boundary layer.
-* **ORM Persistence Layer:** Integrates SQLAlchemy to manage data pipelines, schema migrations, and relational connections seamlessly.
-* **Interactive OpenAPI Integration:** Built-in Swagger UI sandbox framework allows real-time execution testing of endpoints (`GET`, `POST`, `DELETE`).
+## 🛠️ How it Works
+* **The Webpage (`app.py`):** The visual dashboard with forms and buttons where you manage your items.
+* **The Server (`main.py`):** The brain that checks your inputs (like making sure prices aren't negative) and passes data along.
+* **The Database (`ecommerce.db`):** The storage file that saves your products permanently so they don't disappear when you close the app.
 
-## 📦 Local Installation Workflow
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/Production-ECommerce-API.git](https://github.com/YOUR_USERNAME/Production-ECommerce-API.git)
+## 🚀 How to Run It
+
+### Step 1: Install the requirements
+Run this command in your terminal to install everything needed:
+```bash
+pip install fastapi uvicorn sqlalchemy pydantic streamlit requests
